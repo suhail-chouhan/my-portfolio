@@ -1,0 +1,82 @@
+.btn {
+  font-weight: 600;
+  transition: all 0.3 ease;
+  padding: rem(16);
+  width: min(100%, rem(144));
+  border-radius: rem(32);
+  color: $dark-gray;
+  text-decoration: none;
+  text-align: center;
+  &:hover {
+    cursor: pointer;
+    text-decoration: none;
+  }
+  &.btn-outlined {
+    background: none;
+    border: $dark-gray rem(1.6) solid;
+  }
+  &.btn-primary {
+    background: $dark-gray;
+    color: $light;
+    &:hover {
+      background: $dark;
+    }
+  }
+  &.btn-secondary {
+    background: none;
+    &:hover {
+      background: $dark-gray;
+      color: $light;
+      &.btn-outlined {
+        border: $light rem(1.6) solid;
+      }
+    }
+  }
+}
+
+.d-flex {
+  display: flex;
+  &.justify {
+    &-center {
+      justify-content: center;
+    }
+
+    &-around {
+      justify-content: space-around;
+    }
+
+    &-between {
+      justify-content: space-between;
+    }
+
+    &-evenly {
+      justify-content: space-evenly;
+    }
+  }
+  &.gap {
+    &-1 {
+      gap: rem(16);
+    }
+    &-2 {
+      gap: rem(32);
+    }
+    &-3 {
+      gap: rem(48);
+    }
+    &-4 {
+      gap: rem(64);
+    }
+  }
+}
+
+.flex {
+  display: flex;
+
+  &-row {
+    flex-direction: row;
+  }
+
+  &-column {
+    flex-direction: column;
+  }
+}

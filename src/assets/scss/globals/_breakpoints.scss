@@ -1,0 +1,32 @@
+// 390 max width for less smaller screen
+// 768 max width for mobile
+// 1200 max width for table
+// 1440px max width for desktop
+// 1920px for extra large screen
+$breakpoint-up: (
+  'xs': em(390),
+  'sm': em(768),
+  'md': em(1200),
+  'lg': em(1440),
+  'xl': em(1920)
+);
+
+$breakpoint-down: (
+  'xs': em(389.98),
+  'sm': em(767.98),
+  'md': em(1199.98),
+  'lg': em(1439.98),
+  'xl': em(1919.98)
+);
+
+@mixin breakpoint-up($size) {
+  @media (min-width: map-get($breakpoint-up, $size)) {
+    @content;
+  }
+}
+
+@mixin breakpoint-down($size) {
+  @media (max-width: map-get($breakpoint-down, $size)) {
+    @content;
+  }
+}
