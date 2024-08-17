@@ -219,7 +219,7 @@
           </p>
         </div>
         <div class="contact-info-container">
-          <img src="@/assets/images/linkedIn.png" alt="LinkedIn icon" class="icon contact-icon" />
+          <img src="@/assets/images/linkedin.png" alt="LinkedIn icon" class="icon contact-icon" />
           <p>
             <a href="https://www.linkedin.com/in/suhailchouhan" target="_blank">LinkedIn</a>
           </p>
