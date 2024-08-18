@@ -257,7 +257,7 @@ function openResume() {
   if (import.meta.env.PROD) {
     baseUrl = '/'
   }
-  fetch(`${baseUrl}src/assets/images/Suhail-Resume.pdf`, {
+  fetch(`${baseUrl}/Suhail-Resume.pdf`, {
     method: 'GET',
     headers: { Accept: '*/*' }
   })
