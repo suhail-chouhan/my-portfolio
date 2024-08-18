@@ -253,7 +253,7 @@ const experienceList = ref([
   }
 ])
 function openResume() {
-  const baseUrl = import.meta.env.BASE_URL
+  let baseUrl = import.meta.env.BASE_URL
   if (import.meta.env.PROD) {
     baseUrl = '/'
   }
