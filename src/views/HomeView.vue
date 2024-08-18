@@ -10,7 +10,7 @@
         <h1 class="title">Suhail Chouhan</h1>
         <p class="section__text__p2">Frontend Developer</p>
         <div class="btn-container d-flex justify-center gap-1">
-          <a class="btn btn-secondary btn-outlined" @click="downloadResume">Download CV</a>
+          <a class="btn btn-secondary btn-outlined" @click="openResume">Download CV</a>
           <a class="btn btn-primary" href="#contact">Contact Info</a>
         </div>
         <div class="social-container">
@@ -252,7 +252,16 @@ const experienceList = ref([
     ]
   }
 ])
-function downloadResume() {
-  window.open('../assets/images/resume-example.pdf', '_blank')
+function openResume() {
+  const baseUrl = import.meta.env.BASE_URL
+  fetch(`${baseUrl}src/assets/images/Suhail-Resume.pdf`, {
+    method: 'GET',
+    headers: { Accept: '*/*' }
+  })
+    .then((res) => res.blob())
+    .then((blob) => {
+      const resumeURL = URL.createObjectURL(blob)
+      window.open(resumeURL, '_blank')
+    })
 }
 </script>
