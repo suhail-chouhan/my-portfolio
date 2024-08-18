@@ -30,7 +30,7 @@
       </div>
       <div class="section-container">
         <div class="section__pic-container">
-          <img src="@/assets/images/about-pic-1.png" alt="Profile picture" class="about-pic" />
+          <img src="@/assets/images/about-pic-2.png" alt="Profile picture" class="about-pic" />
         </div>
         <div class="about-details-container">
           <div class="about-containers">
