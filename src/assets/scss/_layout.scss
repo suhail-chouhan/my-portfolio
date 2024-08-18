@@ -219,6 +219,7 @@ section {
   }
   &#about {
     flex-direction: column;
+    gap: rem(32);
     .section-container {
       display: flex;
       gap: rem(64);
@@ -235,6 +236,8 @@ section {
     }
     .about-pic {
       border-radius: rem(32);
+      height: 95%;
+      margin: auto;
     }
     .text-container {
       @include breakpoint-down('sm') {
@@ -246,6 +249,7 @@ section {
     display: flex;
     flex-direction: column;
     position: relative;
+    height: 100vh;
     @include breakpoint-down('lg') {
       margin-top: rem(32);
     }
@@ -398,16 +402,15 @@ footer {
 }
 
 .icon {
-  height: rem(32);
+  height: rem(24);
+  color: $dark;
 }
 .arrow {
   position: absolute;
   right: rem(-80);
-  bottom: rem(100);
+  bottom: rem(150);
   &.arrow-up {
-    left: rem(-80);
-    right: 0;
-    transform: rotate(180deg);
+    bottom: rem(100);
   }
   @include breakpoint-down('md') {
     display: none;

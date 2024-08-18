@@ -2,3 +2,11 @@ $dark: black;
 $light: white;
 $dark-gray: hsl(0, 0%, 33%);
 $light-gray: hsl(0, 0%, 71%);
+
+// // Override for dark mode
+// @media (prefers-color-scheme: dark) {
+//   $dark: white;
+//   $light: black;
+//   $light-gray: hsl(0, 0%, 33%);
+//   $dark-gray: hsl(0, 0%, 71%);
+// }
