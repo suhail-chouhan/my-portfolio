@@ -253,10 +253,7 @@ const experienceList = ref([
   }
 ])
 function openResume() {
-  let baseUrl = import.meta.env.BASE_URL
-  if (import.meta.env.PROD) {
-    baseUrl = '/'
-  }
+  const baseUrl = import.meta.env.BASE_URL
   fetch(`${baseUrl}/Suhail-Resume.pdf`, {
     method: 'GET',
     headers: { Accept: '*/*' }
