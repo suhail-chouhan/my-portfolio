@@ -5,8 +5,8 @@ import gsap from 'gsap'
 import ScrollTrigger from 'gsap/ScrollTrigger'
 gsap.registerPlugin(ScrollTrigger)
 ScrollTrigger.defaults({
-  markers: true,
-  start: `-5px ${window.outerWidth <= 768 ? 'top' : '50%'}`,
+  markers: false,
+  start: '-5px 50%',
   end: 'bottom bottom'
 })
 
