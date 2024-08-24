@@ -61,7 +61,7 @@ onMounted(() => {
 
   aboutTimeline.from('#about .section__text > *', {
     opacity: 0,
-    duration: 1.5,
+    duration: 1.25,
     ease: 'bounce.out',
     y: -500
   })

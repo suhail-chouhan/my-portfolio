@@ -33,9 +33,14 @@ onMounted(() => {
 
   contactTimeline.from('#contact .section__text > *', {
     opacity: 0,
-    duration: 1.5,
+    duration: 1.25,
     ease: 'bounce.out',
     y: -500
+  })
+  contactTimeline.from('#contact .contact-info-upper-container', {
+    opacity: 0,
+    x: '-100vw',
+    duration: 1
   })
   ScrollTrigger.create({
     trigger: '#contact',

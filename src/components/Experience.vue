@@ -101,7 +101,7 @@ onMounted(() => {
 
   experienceTimeline.from('#experience .section__text > *', {
     opacity: 0,
-    duration: 1.5,
+    duration: 1.25,
     ease: 'bounce.out',
     y: -500
   })
@@ -112,7 +112,7 @@ onMounted(() => {
       x: '-100vw',
       stagger: {
         from: 'end',
-        amount: 1
+        amount: 0.8
       },
       duration: 0.8
     }
