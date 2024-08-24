@@ -1,126 +1,16 @@
-nav {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  height: 17vh;
-  .nav-links {
-    display: flex;
-    gap: 2rem;
-    list-style: none;
-    font-size: 1.5rem;
-    a {
-      color: $dark;
-      text-decoration: none;
-      text-decoration-color: $light;
-      &:hover {
-        color: $light-gray;
-        text-decoration: underline;
-        text-underline-offset: 1rem;
-        text-decoration-color: $light-gray;
-      }
-      @include breakpoint-down('sm') {
-        font-size: rem(16);
-      }
-    }
-    @include breakpoint-down('sm') {
-      flex-direction: column;
-      gap: rem(8);
-      text-align: center;
-    }
-  }
-  &.desktop-nav {
-    @include breakpoint-down('md') {
-      display: none;
-    }
-  }
-  &.hamburger-nav {
-    display: none;
-    .hamburger-menu {
-      position: relative;
-      display: inline-block;
-      z-index: 1;
-      .hamburger-icon {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        height: rem(24);
-        width: rem(30);
-        cursor: pointer;
-        span {
-          width: 100%;
-          height: rem(2);
-          background-color: $dark;
-          transition: all 0.3 ease-in-out;
-          &:first-child {
-            transform: none;
-          }
-          &:nth-child(2) {
-            opacity: 1;
-          }
-          &:last-child {
-            transform: none;
-          }
-        }
-        &.open {
-          span {
-            &:first-child {
-              transform: rotate(45deg) translate(rem(10), rem(5));
-            }
-            &:nth-child(2) {
-              opacity: 0;
-            }
-            &:last-child {
-              transform: rotate(-45deg) translate(rem(10), rem(-5));
-            }
-          }
-        }
-      }
-      .menu-links {
-        position: absolute;
-        top: 100%;
-        right: 0;
-        background-color: rgba($light, 0.8);
-        width: fit-content;
-        max-width: rem(300);
-        overflow: hidden;
-        transition: all 0.3 ease-in-out;
-        a {
-          display: block;
-          padding: rem(10);
-          text-align: center;
-          font-size: rem(24);
-          color: $dark;
-          text-decoration: none;
-          transition: all 0.3 ease-in-out;
-        }
-      }
-    }
-    @include breakpoint-down('md') {
-      display: flex;
-    }
-  }
-  .logo {
-    font-size: 2rem;
-    &:hover {
-      cursor: default;
-    }
-    @include breakpoint-down('sm') {
-      font-size: rem(24);
-    }
-  }
-}
-
 section {
   display: flex;
   justify-content: center;
+  align-items: center;
   position: relative;
-  padding-top: 4vh;
-  height: 96vh;
+  padding-top: 10vh;
+  height: 100%;
   margin: 0 rem(160);
   min-height: fit-content;
   @include breakpoint-down('md') {
     height: fit-content;
     margin: 0 5%;
+    padding-top: 5vh;
   }
   .section__pic-container {
     display: flex;
@@ -145,7 +35,6 @@ section {
       font-weight: 600;
     }
   }
-
   .section__text__p1 {
     text-align: center;
   }
@@ -189,7 +78,6 @@ section {
   }
   &#profile {
     gap: rem(80);
-    height: 80vh;
     .social-container {
       display: flex;
       justify-content: center;
@@ -206,20 +94,14 @@ section {
       }
     }
     @include breakpoint-down('sm') {
-      height: 83vh;
       margin-bottom: 0;
     }
     @include breakpoint-down('md') {
       display: block;
     }
-    @include breakpoint-down('lg') {
-      height: 83vh;
-      margin-bottom: rem(96);
-    }
   }
   &#about {
     flex-direction: column;
-    gap: rem(32);
     .section-container {
       display: flex;
       gap: rem(32);
@@ -249,10 +131,6 @@ section {
     display: flex;
     flex-direction: column;
     position: relative;
-    height: 100vh;
-    @include breakpoint-down('lg') {
-      margin-top: rem(32);
-    }
     .experience-sub-title {
       color: rgb(85, 85, 85);
       font-weight: 600;
@@ -266,9 +144,6 @@ section {
       display: flex;
       justify-content: center;
       flex-direction: column;
-      @include breakpoint-down('lg') {
-        margin-top: rem(32);
-      }
 
       .article-container {
         display: flex;
@@ -328,7 +203,7 @@ section {
     flex-direction: column;
     height: 70vh;
     @include breakpoint-down('sm') {
-      height: 40vh;
+      height: fit-content;
     }
     .contact-info-upper-container {
       display: flex;
@@ -378,25 +253,6 @@ section {
           }
         }
       }
-    }
-  }
-}
-
-footer {
-  position: relative;
-  height: 30vh;
-  margin: 0 rem(160);
-  @include breakpoint-down('sm') {
-    height: 40vh;
-    margin: 0;
-  }
-  p {
-    text-align: center;
-  }
-  nav {
-    @include breakpoint-down('sm') {
-      height: fit-content;
-      margin-bottom: rem(32);
     }
   }
 }
