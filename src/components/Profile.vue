@@ -46,7 +46,6 @@ onMounted(() => {
   })
   ScrollTrigger.create({
     trigger: '#profile',
-    start: '-5 50%',
     onEnter: () => {
       profileTimeline.play()
     },

@@ -80,7 +80,8 @@ onMounted(() => {
   })
 
   ScrollTrigger.create({
-    trigger: '#profile',
+    trigger: '#about',
+    start: '15% 50%',
     onEnter: () => {
       aboutTimeline.play()
     }

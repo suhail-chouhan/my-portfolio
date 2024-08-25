@@ -70,7 +70,7 @@ onMounted(() => {
       opacity: 0,
       x: '-100vw',
       stagger: {
-        from: 'end',
+        from: window.outerWidth <= 768 ? 'start' : 'end',
         amount: 0.8
       },
       duration: 0.8

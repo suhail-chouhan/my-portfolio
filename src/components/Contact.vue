@@ -44,6 +44,7 @@ onMounted(() => {
   })
   ScrollTrigger.create({
     trigger: '#contact',
+    start: 'top bottom',
     onEnter: () => {
       contactTimeline.play()
     }
